@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'mplus';
+    src: url('mplus-2c-medium.ttf') format('truetype');
+}
+
+* {
+    margin : 0;
+    padding : 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family : 'mplus';
+}
+
+#site_box {
+    height : 100%;
+    min-height: 100%;
+}

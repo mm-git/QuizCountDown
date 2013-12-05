@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project basedir="." default="compile">
+  <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="../../../script/compiler.jar"/>
+  <target name="compile">
+    <jscomp compilationLevel="simple" warning="verbose" debug="false" output="main.min.js">
+      <externs dir="../../../script">
+        <file name="jquery.externs.js"/>
+      </externs>
+      <externs dir="../../common/js">
+        <file name="common.externs.js"/>
+      </externs>
+      <externs dir="${basedir}">
+        <file name="contents.externs.js"/>
+      </externs>
+      <sources dir="${basedir}">
+        <file name="sound.js"/>
+        <file name="countdown.js"/>
+        <file name="slide.js"/>
+        <file name="explanation.js"/>
+        <file name="quiz.js"/>
+        <file name="main.js"/>
+      </sources>
+    </jscomp>
+  </target>
+</project> 
